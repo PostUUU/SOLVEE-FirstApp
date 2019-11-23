@@ -1,0 +1,31 @@
+<div>
+<h1>Calculation weight</h1>
+<p>Perfect weight: {{result}}</p>
+
+<input [(ngModel)]='age' type="number" name="age" placeholder="Please, Enter Age!"/>
+<input [(ngModel)]='height' type="number" name="height" placeholder="Please, Enter Height!"/>
+<input [(ngModel)]='weight' type="number" name="weight" placeholder="Please, Enter Weight!"/>
+<br/>
+
+<button (click)="calc(height, age, weight)">Result</button>
+
+<button (click)="show($event);">History</button>
+</div>
+
+<table [ngClass]="showTable">
+  <thead>
+     <tr>
+       <th>Age</th>
+       <th>Height</th>
+       <th>Weight</th>
+     </tr>
+  </thead>
+  <tbody>
+     <tr *ngFor="let item of items">
+        <td>{{item.age}}</td>
+        <td>{{item.height}}</td>
+        <td>{{item.weight}}</td>
+    </tr>
+   </tbody>
+</table>
+
