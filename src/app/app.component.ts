@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 class Item{
   height: number;
@@ -29,11 +29,8 @@ export class AppComponent {
       this.showTable["class1"] = !this.showTable["class1"];
   }
   
-  items: Item[]=
-  [
-    { height: 176, age: 34, weight: 56 }
-  ];
-
+  items: Item[]= [];
+  
   public result: number;
   calc(height:number, age:number, weight:number):void{
     if(height==null || age==null || weight==null)
